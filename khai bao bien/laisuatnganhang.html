@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let loanAmount = prompt("Nhập số tiền vay:");
+        let interestRate = prompt("Nhập lãi suất (%):");
+        let numberOfYears = prompt("Nhập số năm:");
+        let tienvay = parseFloat(loanAmount);
+        let rate = parseFloat(interestRate);
+        let years = parseInt(numberOfYears);
+        let interest = (tienvay * rate * years) / 100;
+        let totalAmount = tienvay + interest;
+        document.write("Số tiền phải trả sau " + years + " năm là: " + totalAmount + " triệu đồng");
+    </script>
+</body>
+
+</html>
