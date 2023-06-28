@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizz Buzz</title>
+</head>
+
+<body>
+    <script>
+        function fizzBuzz() {
+            let output = document.getElementById("output");
+            let numbers = +prompt("nhap 1 so");
+            let number = 1;
+            let result = "";
+
+            while (number <= numbers) {
+                if (number % 3 === 0 && number % 5 === 0) {
+                    result = "FizzBuzz";
+                } else if (number % 3 === 0) {
+                    result = "Fizz";
+                } else if (number % 5 === 0) {
+                    result = "Buzz";
+                } else {
+                    result = number;
+                }
+
+                output.innerHTML += result + "<br>";
+                number++;
+            }
+        }
+    </script>
+    </head>
+
+    <body>
+        <h1>FizzBuzz</h1>
+        <div id="output"></div>
+        <script>
+            fizzBuzz();
+        </script>
+    </body>
+
+</html>

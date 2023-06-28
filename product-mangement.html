@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .product {
+        font-size: 25px;
+        margin: 15px;
+    }
+
+    .product:nth-child.product:nth-child(odd) {
+        background-color: pink;
+    }
+
+    .product .item-name {
+        width: 300px;
+    }
+
+    .product button {
+        padding: 10px 15px;
+        background-color: lightblue;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .product button:hover {
+        background-color: palevioletred;
+    }
+
+    #add-new-product {
+        width: 500px;
+        background-color: rgba(210, 181, 181, 0.4)
+    }
+</style>
+
+<body>
+    <form id="add-new-product">
+        <fieldset>
+            <legend> Add New Product</legend>
+            <input type="text" id="product-name" placeholder="New Product">
+            <button type="button" onclick="addProduct()">Add</button>
+        </fieldset>
+    </form>
+    <form id="update-product" style="display: none;">
+        <fieldset>
+            <legend> Update Product </legend>
+            <input type="text" id="product-name" placeholder="New Product">
+            <button type="button" onclick="addProduct()">Add</button>
+        </fieldset>
+    </form>
+    <h1>product list </h1>
+    <table id="product-list">
+        </div>
+
+</body>
+<script>
+    let products = loadData();
+    function displayAll() {
+        let str = "";
+        for (let i = 0; i < products.length; i++) {
+            str += `<tr class='product'>
+                        <td class="item-name">${products[i]}</td>
+                        <td><button onclick="editProduct(${i})">Edit</button></td>
+                        <td><button onclick="deleteProduct(${i})">Delete</button></td>
+                     </tr>`
+        }
+        document.getElementById("product-list").innerHTML = str;
+        saveData();
+    }
+    function addProduct() {
+        let name = document.getElementById("product-name").value;
+        products.push(name);
+        displayAll();
+        document.getElementById("add-new-product").reset();
+    }
+    function edit(index) {
+        products[index] = prompt("Input new product name", products[index]);
+        displayAll();
+    }
+    function deleteProduct(index) {
+        let check = confirm('Are you sure you want to delete this?');
+        if (check) {
+            products.splice(index, 1);
+            displayAll();
+        }
+    }
+
+    displayAll();
+    function saveData() {
+        localStorage.setItem("products", JSON.stringify(products));
+    }
+    function loadData() {
+        if (localStorage.hasOwnProperty("products")) {
+            let data = localStorage.getItem("products");
+            return JSON.parse(data);
+        } else {
+            return [];
+        }
+    }
+</script>
+
+</html>
