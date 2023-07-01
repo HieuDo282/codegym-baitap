@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #555;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function displayLetter() {
+      let ten_nguoi_nhan = document.getElementById("ten_nguoi_nhan").value;
+      let dia_diem = document.getElementById("dia_diem").value;
+      let thoi_gian = document.getElementById("thoi_gian").value;
+
+      let noi_dung = `
+        <h2>${ten_nguoi_nhan} thương nhớ,</h2>
+        <p>Em không biết phải nói sao để anh hiểu rằng, em nhớ anh thật nhiều. Em yêu anh đến khi trái tim này tan thành nghìn mảnh. Tất cả những gì em yêu thương, em khát khao và cần đến, chính là anh, mãi mãi về sau. Em chỉ muốn ở bên anh, và anh yêu hỡi, em sẽ trở thành người phụ nữ như anh mong muốn.</p>
+        <p>Có phải em thật tệ hại, khi cứ nghĩ đến anh thật nhiều, thật lâu và nhất là mỗi khi đêm xuống? Em hứa sẽ sẽ cố gắng triệu triệu lần hơn thế. Nhưng hơn tất cả, em chỉ mong một ngày nào đó, anh sẽ tự hào về em, như tự hào về vợ của anh, và mẹ của các con anh (ít nhất là 2 nhé, em vừa mới quyết định đấy!). Em nhớ thật nhiều cảm giác mỗi đêm anh ôm em và ru em ngủ trong vòng tay. Đêm nay, em chỉ muốn được gần bên anh... và anh biết không, trái tim em đang đau đớn đến nhường nào.</p>
+        <p>Anh yêu thương, đừng bao giờ rời xa em nữa nhé. Yêu anh rất nhiều.</p>
+        <p>${dia_diem}, ngày ${thoi_gian}.</p>
+      `;
+
+      document.getElementById("letter").innerHTML = noi_dung;
+    }
+  </script>
+
+  <h1>Write a Letter</h1>
+  <label for="ten_nguoi_nhan">Tên người nhận:</label>
+  <input type="text" id="ten_nguoi_nhan"><br>
+
+  <label for="dia_diem">Địa điểm:</label>
+  <input type="text" id="dia_diem"><br>
+
+  <label for="thoi_gian">Thời gian:</label>
+  <input type="text" id="thoi_gian"><br>
+
+  <button onclick="displayLetter()">Generate Letter</button>
+
+  <div id="letter"></div>
+</body>
+</html>
