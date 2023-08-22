@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* basic styling to the body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* form container */
+  .booking-form {
+    background-color:bisque;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  /* Style for form sections */
+  .form__info,
+  .form__choose1,
+  .form__choose2,
+  .pickup__date,
+  .pickup__place,
+  .dropoff__place,
+  .special__instructions,
+  .button__submit {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for labels */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  /* Style for input fields */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="datetime-local"],
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:hover,
+  input[type="number"]:hover,
+  input[type="email"]:hover,
+  input[type="datetime-local"]:hover,
+  input[type="text"]:hover,
+  select:hover,
+  textarea:hover {
+    border-color: #007bff;
+  }
+  
+  /* Style for radio and checkbox groups */
+  .input-group,
+  .input-group2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  
+  /* Style for radio and checkbox labels */
+  .input-group label,
+  .input-group2 label {
+    margin-left: 6px;
+    color:black;
+  }
+  
+  /* Style for radio and checkbox inputs on hover */
+  .input-group input:hover,
+  .input-group2 input:hover {
+    border-color: #007bffs;
+  }
+  
+  /* Style for buttons */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

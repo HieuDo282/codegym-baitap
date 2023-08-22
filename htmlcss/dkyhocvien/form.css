@@ -1,0 +1,23 @@
+h2 {
+    color: blue;
+    background-color: #d4fdd6;
+
+}
+
+.left {
+    display: inline-block;
+    width: 100px;
+}
+
+.right {
+    display: inline-block
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.sum {
+    background-color: #fffda9;
+    padding-bottom: 5px;
+}

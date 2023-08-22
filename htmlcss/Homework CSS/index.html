@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="booking-form" action="process.php" method="POST">
+        <div class="form__info">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="phone">Phone</label>
+            <input type="number" id="phone" name="phone"><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"><br>
+        </div>
+
+        <fieldset class="form__choose1">
+            <legend>Which taxi do you require?</legend>
+            <div class="input-group">
+                <input type="radio" name="taxi_type" value="car" id="car">
+                <label for="car">Car</label>
+            </div>
+            <div class="input-group">
+                <input type="radio" name="taxi_type" value="van" id="van">
+                <label for="van">Van</label>
+            </div>
+            <div class="input-group">
+                <input type="radio" name="taxi_type" value="tuk tuk" id="tuk_tuk">
+                <label for="van">Tuk Tuk</label>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="form__choose2">
+            <legend>Extra needs?</legend>
+            <div class="input-group2">
+                <input type="checkbox" name="Extras" value="baby" id="baby">
+                <label for="car">Baby seat</label>
+            </div>
+            <div class="input-group2">
+                <input type="checkbox" name="Extras" value="wheelchair" id="wheelchair">
+                <label for="van">Wheelchair Access</label>
+            </div>
+            <div class="input-group2">
+                <input type="checkbox" name="Extras" value="stock" id="stock">
+                <label for="van">Stock Tip </label>
+            </div>
+
+        </fieldset>
+
+
+        <div class="pickup__date">
+            <label for="date">Pickup Date/Time</label>
+            <input type="datetime-local" id="date" name="pickup_datetime"><br>
+        </div>
+
+        <div class="pickup__place">
+            <label for="pickup-place">Pickup Place</label>
+            <select name="pickup_address" id="pickup-place">
+                <option value="abc">Please select one</option>
+                <option value="HCMC"> Thành Phố HCM</option>
+                <option value="HaNoi">Hà Nội</option>
+                <option value="DaNang">Đà Nẵng</option>
+            </select><br>
+        </div>
+
+        <div class="dropoff__place">
+            <label for="dropoff-place">Dropoff Place</label>
+            <input type="text" id="dropoff-place" name="dropoff_place"><br>
+        </div>
+
+        <div class="special__instructions">
+            <label for="special-instructions">Special Instructions:</label>
+            <textarea id="special-instructions" name="specialInstructions" rows="3" cols="30"></textarea>
+        </div>
+
+        <div class="button__submit">
+            <button type="submit">Submit Booking</button>
+        </div>
+    </form>
+</body>
+
+</html>

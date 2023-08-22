@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="table-form" action="process.php" method="POST">
+        <table>
+            <tr>
+                <td><label for="yourname">Họ và tên</label></td>
+                <td><input type="text" id="yourname" name="yourname"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><label>Sở thích</label></td>
+                <td>
+                    <input type="checkbox" name="hobby" value="Reading">Đọc sách<br>
+                    <input type="checkbox" name="hobby" value="Traveling">Du lịch<br>
+                    <input type="checkbox" name="hobby" value="Cooking">Nấu ăn
+
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="button-cell">
+                    <button type="submit">Gửi thông tin</button>
+                    <button type="reset">Nhập lại</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

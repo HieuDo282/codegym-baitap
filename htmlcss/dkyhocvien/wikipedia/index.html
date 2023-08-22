@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Wikipedia</h1>
+            <p>A Free Encyclopedia</p>
+        </div>
+    </header>
+
+    <form action="https://en.wikipedia.org/w/index.php" method="get">
+        <input type="hidden" name="title" value="Special:Search">
+        <input type="text" name="search" placeholder="Search Wikipedia">
+        <input type="submit" value="Search">
+    </form>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Topics</a></li>
+                <li><a href="#">Discussion</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <h2>Featured Article</h2>
+            <p>Coming Soon</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Wikipedia Clone. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
