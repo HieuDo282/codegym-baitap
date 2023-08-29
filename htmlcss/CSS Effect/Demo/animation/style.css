@@ -1,0 +1,27 @@
+div {
+    position: relative;
+    background-color: red;
+  width: 100px;
+  height: 100px;
+  /* animation-name: example; */
+  /* animation-delay: 2s; */
+  /* animation-duration: 4s; */
+  /* animation-iteration-count: 2;  */
+  /* animation-direction: alternate;   */
+  /* animation-fill-mode: forwards; */
+  /* /* animation-timing-function: ease-out; */
+  animation: example 4s ease-out 2s 2 alternate forwards;
+}
+
+@keyframes example {
+  /* 0%   {background-color: rgb(21, 21, 52) ;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;} */
+
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:rgb(7, 3, 3); left:0px; top:0px;}
+}
